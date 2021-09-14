@@ -1,9 +1,15 @@
 <!DOCTYPE StreamControl>
 <settings>
- <xsplitPath><![CDATA[C:\Users\marco\Desktop\FGCPucela\]]></xsplitPath>
- <layoutPath><![CDATA[C:\Users\marco\Desktop\FGCPucela\layout.xml]]></layoutPath>
+ <xsplitPath><![CDATA[pathtoOBS]]></xsplitPath>
+ <layoutPath><![CDATA[C:\Users\marcos.martinez\Documents\Privados\StreamControl-FGCPucela\layout.xml]]></layoutPath>
  <useCDATA>1</useCDATA>
  <games>
-  <game><![CDATA[Melty Blood]]></game>
+  <game><![CDATA[WINNERS BRACKET]]></game>
+  <game><![CDATA[LOSERS BRACKET]]></game>
+  <game><![CDATA[TOP 8 WINNERS]]></game>
+  <game><![CDATA[TOP 8 LOSERS]]></game>
+  <game><![CDATA[WINNERS FINALS]]></game>
+  <game><![CDATA[LOSERS FINALS]]></game>
+  <game><![CDATA[GRAND FINALS]]></game>
  </games>
 </settings>
