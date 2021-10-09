@@ -3,6 +3,8 @@ var timestamp;
 var com1;
 var com2;
 var com3;
+var alturacom12 = parseInt($('#com1').css("top"));
+var alturacom3= parseInt($('#com3').css("top")); //recoge los valores de altura para evitar modificar los valores en este archivo constantemente
 
 var xmlDoc;
 
@@ -12,7 +14,7 @@ var animating = false;
 var doUpdate = false;
 
 function init() {
-
+    console.log(alturacom12);
     xhr.overrideMimeType('text/xml');
 
     var timeout = this.window.setInterval(function() {
@@ -63,8 +65,8 @@ function updateBoard() {
         animating = true;
         $('#com1').tween({
             top: {
-                start: 514,
-                stop: 554,
+                start: alturacom12,
+                stop: alturacom12 + 40,
                 units: 'px',
                 time: 0,
                 duration: 0.5,
@@ -84,8 +86,8 @@ function updateBoard() {
 
         $('#com1').tween({
             top: {
-                start: 554,
-                stop: 514,
+                start: alturacom12 + 40,
+                stop: alturacom12,
                 units: 'px',
                 time: 0.5,
                 duration: 0.5,
@@ -108,8 +110,8 @@ function updateBoard() {
         animating = true;
         $('#com2').tween({
             top: {
-                start: 514,
-                stop: 554,
+                start: alturacom12,
+                stop: alturacom12 + 40,
                 units: 'px',
                 time: 0,
                 duration: 0.5,
@@ -129,8 +131,8 @@ function updateBoard() {
 
         $('#com2').tween({
             top: {
-                start: 554,
-                stop: 514,
+                start: alturacom12 + 40,
+                stop: alturacom12,
                 units: 'px',
                 time: 0.5,
                 duration: 0.5,
@@ -153,8 +155,8 @@ function updateBoard() {
         animating = true;
         $('#com3').tween({
             top: {
-                start: 607,
-                stop: 647,
+                start: alturacom3,
+                stop: alturacom3 + 40,
                 units: 'px',
                 time: 0,
                 duration: 0.5,
@@ -174,8 +176,8 @@ function updateBoard() {
 
         $('#com3').tween({
             top: {
-                start: 647,
-                stop: 607,
+                start: alturacom3 + 40,
+                stop: alturacom3,
                 units: 'px',
                 time: 0.5,
                 duration: 0.5,
