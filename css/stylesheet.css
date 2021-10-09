@@ -34,7 +34,7 @@ body {
     left: 0px;
     width: 1280px;
     height: 720px;
-    background-image: url('../images/Template comentarista 2.png');
+    background-image: url('../images/Template comentarista (presencial).png');
 }
 
 #pName1 {
@@ -64,9 +64,9 @@ body {
 
 #com1 {
     position: absolute;
-    left: 86px;
-    top: 342px;
-    width: 370px;
+    left: 159px;
+    top: 514px;
+    width: 369px;
     font-size: 32px;
     text-align: center;
 }
@@ -77,8 +77,8 @@ body {
 
 #com2 {
     position: absolute;
-    left: 825px;
-    top: 342px;
+    left: 752px;
+    top: 514px;
     width: 370px;
     font-size: 32px;
     text-align: center;
