@@ -59,18 +59,12 @@ function loadData() {
 }
 
 function updateBoard() {
-    if(com3 != ''){
-        $('#boardc').css("background-image","url('../images/Template comentarista 3.png')");
-    }
-    /*else{
-        $('#boardc').css("background-image","url('../images/Template comentarista 2.png')");
-    }*/
     if ($('#com1').html() != com1) {
         animating = true;
         $('#com1').tween({
             top: {
-                start: 342,
-                stop: 382,
+                start: 514,
+                stop: 554,
                 units: 'px',
                 time: 0,
                 duration: 0.5,
@@ -90,8 +84,8 @@ function updateBoard() {
 
         $('#com1').tween({
             top: {
-                start: 382,
-                stop: 342,
+                start: 554,
+                stop: 514,
                 units: 'px',
                 time: 0.5,
                 duration: 0.5,
@@ -114,8 +108,8 @@ function updateBoard() {
         animating = true;
         $('#com2').tween({
             top: {
-                start: 342,
-                stop: 382,
+                start: 514,
+                stop: 554,
                 units: 'px',
                 time: 0,
                 duration: 0.5,
@@ -135,8 +129,8 @@ function updateBoard() {
 
         $('#com2').tween({
             top: {
-                start: 382,
-                stop: 342,
+                start: 554,
+                stop: 514,
                 units: 'px',
                 time: 0.5,
                 duration: 0.5,
