@@ -3,8 +3,10 @@ var timestamp;
 var com1;
 var com2;
 var com3;
+var cbcom3;
+var cbPre;
 var alturacom12 = parseInt($('#com1').css("top"));
-var alturacom3= parseInt($('#com3').css("top")); //recoge los valores de altura para evitar modificar los valores en este archivo constantemente
+var alturacom3= parseInt($('#com3').css("top")); //recoge los valores de altura para evitar modificar los valores en el CSS
 
 var xmlDoc;
 
@@ -14,7 +16,7 @@ var animating = false;
 var doUpdate = false;
 
 function init() {
-    console.log(alturacom12);
+
     xhr.overrideMimeType('text/xml');
 
     var timeout = this.window.setInterval(function() {
@@ -32,7 +34,6 @@ function init() {
             effect: 'easeOut'
         }
     });
-
     $.play();
 }
 
@@ -54,6 +55,8 @@ function loadData() {
         com1 = getValueFromTag(xmlDoc, 'com1');
         com2 = getValueFromTag(xmlDoc, 'com2');
         com3 = getValueFromTag(xmlDoc, 'com3');
+        cbcom3 = getValueFromTag(xmlDoc, 'tercom');
+        cbPre = getValueFromTag(xmlDoc, 'comPre');
         timestampOld = timestamp;
         timestamp = getValueFromTag(xmlDoc, 'timestamp');
 
@@ -61,8 +64,35 @@ function loadData() {
 }
 
 function updateBoard() {
-    if ($('#com1').html() != com1) {
+    //Cambio a interfaz no presencial
+    if(cbPre == 0){
+        $('#com1').css("left","86px");
+        $('#com1').css("top","332px");
+        $('#com2').css("left","826px");
+        $('#com2').css("top","332px");
+        alturacom12 = parseInt($('#com1').css("top"));
+        // 3 coment
+        if (cbcom3 == 1){
+            $('#boardc').css("background-image", 'url("images/Template comentarista 3.png")');
+        }
+        //2 coment
+        else{ 
+            $('#boardc').css("background-image", 'url("images/Template comentarista 2.png")');
+        }
+    }
+    // Cambio interfaz presencial
+    else{
+        $('#boardc').css("background-image", 'url("images/Template comentarista (presencial).png")');
+        $('#com1').css("left","159px");
+        $('#com1').css("top","514px");
+        $('#com2').css("left","752px");
+        $('#com2').css("top","514px");
+        alturacom12 = parseInt($('#com1').css("top"));
+    }
+    //Animacion comentarista 1
+    if ($('#com1').html() != com1) { 
         animating = true;
+        //Animacion desaparicion del nombre (se repite para todas)
         $('#com1').tween({
             top: {
                 start: alturacom12,
@@ -83,7 +113,7 @@ function updateBoard() {
                 $('#com1').html(com1);
             }
         });
-
+        //Animacion aparicion del nombre (se repite para todas)
         $('#com1').tween({
             top: {
                 start: alturacom12 + 40,
@@ -105,7 +135,7 @@ function updateBoard() {
             }
         });
     }
-
+//Animacion comentarista 2
     if ($('#com2').html() != com2) {
         animating = true;
         $('#com2').tween({
@@ -150,7 +180,7 @@ function updateBoard() {
             }
         });
     }
-
+//Animacion comentarista 3
     if ($('#com3').html() != com3) {
         animating = true;
         $('#com3').tween({
@@ -201,6 +231,7 @@ function updateBoard() {
     doUpdate = false;
 }
 
+//Recoge los valores del archivo streamcontrol.xml
 function getValueFromTag(xmlDoc, tag) {
     if (xmlDoc.getElementsByTagName(tag).length != 0) {
         if (xmlDoc.getElementsByTagName(tag)[0].childNodes.length == 0) {

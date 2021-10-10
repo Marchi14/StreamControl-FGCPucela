@@ -15,11 +15,11 @@
  <tab name="Comentaristas">
   <label x="0" y="20" width="90" height="15">Comentarista 1</label>
   <label x="220" y="20" width="90" height="15">Comentarista 2</label>
+  <checkBox id="tercom" x="10" y="60" width="70" height="20">3com</checkBox>
   <label x="85" y="60" width="90" height="15">Comentarista 3</label>
   <lineEdit id="com1" x="90" y="15" width="120" height="20" />
+  <checkBox id="comPre" x="330" y="55" width="80" height="20">comPre</checkBox>
   <lineEdit id="com2" x="310" y="15" width="120" height="20" />
   <lineEdit id="com3" x="175" y="55" width="120" height="20" />
- </tab>
- <tab name="CHALLONGE">
  </tab>
 </layout>
