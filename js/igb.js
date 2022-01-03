@@ -58,7 +58,7 @@ function loadData() {
         pName2 = getValueFromTag(xmlDoc, 'pName2');
         pScore1 = getValueFromTag(xmlDoc, 'pScore1');
         pScore2 = getValueFromTag(xmlDoc, 'pScore2');
-        Ronda = getValueFromTag(xmlDoc, 'Ronda');
+        Ronda = getValueFromTag(xmlDoc, 'game');
         timestampOld = timestamp;
         timestamp = getValueFromTag(xmlDoc, 'timestamp');
 
