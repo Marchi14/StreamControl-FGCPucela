@@ -22,7 +22,4 @@
   <lineEdit id="com2" x="310" y="15" width="120" height="20" />
   <lineEdit id="com3" x="175" y="55" width="120" height="20" />
  </tab>
- <tab name="Bracket">
-  <lineEdit id="bracket" x="30" y="50" width="380" height="30" />
- </tab>
 </layout>

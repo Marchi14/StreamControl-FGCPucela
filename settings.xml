@@ -1,17 +1,12 @@
 <!DOCTYPE StreamControl>
 <settings>
- <xsplitPath><![CDATA[C:\Users\marco\Documents\StreamControl-FGCPucela\]]></xsplitPath>
- <layoutPath><![CDATA[C:\Users\marco\Documents\StreamControl-FGCPucela\layout.xml]]></layoutPath>
- <useCDATA>0</useCDATA>
+ <altHotkeyHandling>0</altHotkeyHandling>
+ <format>3</format>
  <games>
-  <game><![CDATA[WINNERS BRACKET]]></game>
-  <game><![CDATA[LOSERS BRACKET]]></game>
-  <game><![CDATA[TOP 8 WINNERS]]></game>
-  <game><![CDATA[TOP 8 LOSERS]]></game>
-  <game><![CDATA[WINNERS FINALS]]></game>
-  <game><![CDATA[LOSERS FINALS]]></game>
-  <game><![CDATA[GRAND FINALS]]></game>
-  <game><![CDATA[Round Robin]]></game>
-  <game><![CDATA[FREE PLAYS]]></game>
+  <game>FREE PLAYS</game>
  </games>
+ <layoutPath>C:\Users\marco\Documents\StreamControl-FGCPucela\layout.xml</layoutPath>
+ <outputPath>C:\Users\marco\Documents\StreamControl-FGCPucela\</outputPath>
+ <useCDATA>0</useCDATA>
+ <xsplitPath>C:\Users\marco\Documents\StreamControl-FGCPucela\</xsplitPath>
 </settings>
